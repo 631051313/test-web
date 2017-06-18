@@ -1,0 +1,66 @@
+@import "adapter.less";
+@import "base.less";
+@import "fonts.less";
+.layout{
+  .tab_nav{
+    img{
+      width: 100%;
+      padding-bottom: 34/32rem;
+    }
+  }
+  .content{
+    .items{
+      >div:nth-of-type(-n+5){
+        width: 100%;
+        height: 105/32rem;
+        line-height: 105/32rem;
+        border-top: 1px solid #ccc;
+        background-color: #fff;
+        padding: 0 26/32rem;
+        box-sizing: border-box;
+        font-size: 30/32rem;
+      }
+      .item_2{
+        .left,.right{
+          height: 100%;
+          box-sizing: border-box;
+          position: relative;
+          padding: 0 26/32rem;
+          > span:last-of-type{
+            color:#ccc;
+            display: block;
+            position: absolute;
+            right: 26/32rem;
+          }
+          > span:first-of-type{
+            display: block;
+            position: absolute;
+            left: 0;
+          }
+        }
+        .left{
+          width: 55%;
+          float: left;
+          border-right: 1px solid #ccc;
+          > span:last-of-type{
+          }
+      }
+        .right{
+          float: right;
+          width: 45%;
+          left:26/32rem;
+        }
+      }
+      .item_6{
+        margin: 0 26/32rem;
+        //box-sizing: border-box;
+        height: 80/32rem;
+        line-height: 80/32rem;
+        text-align: center;
+        border-radius: 5px;
+        color: #fff;
+        background-color: #ff9b25;
+      }
+    }
+  }
+}

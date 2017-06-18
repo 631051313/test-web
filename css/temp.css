@@ -1,0 +1,322 @@
+/*注释     这种注释才会编译*/
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+/*嵌套*/
+/*1.头部部分*/
+.header {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #000;
+}
+.header .row {
+  height: 100%;
+  text-align: center;
+}
+.header .row div:nth-of-type(-n+3) {
+  border-right: 1px solid #ccc;
+}
+.header .row div:nth-of-type(-n+3) .icon_code {
+  position: relative;
+  display: block;
+}
+.header .row div:nth-of-type(-n+3) .icon_code img {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 49px;
+  transform: translate(-50%, 0);
+  border: 1px solid #000;
+  border-top: none;
+  z-index: 999;
+}
+.header .row div:nth-of-type(-n+3) .icon_code:hover img {
+  display: block;
+}
+.header .row div:nth-last-of-type(1) .btn-danger {
+  background-color: #e92323;
+}
+.header .row div:nth-last-of-type(1) .btn {
+  padding: 3px 15px;
+}
+/*2.导航部分*/
+.nav {
+  margin-bottom: 0;
+}
+.nav .container .navbar-header .navbar-brand {
+  line-height: 50px;
+  font-size: 40px;
+}
+.nav .container .navbar-header .navbar-brand .wjs_icon_logo {
+  color: #f00;
+}
+.nav .container .navbar-header .navbar-brand .wjs_icon_text {
+  color: #000;
+}
+.nav .container .navbar-collapse .navbar-nav > li > a {
+  font-size: 20px;
+  padding: 15px 20px;
+  line-height: 50px;
+}
+.nav .container .navbar-collapse .navbar-nav > li > a:hover {
+  border-bottom: 3px solid #f00;
+}
+.nav .container .navbar-collapse .navbar-nav:nth-of-type(1) li:nth-of-type(1) a {
+  background-color: transparent;
+  border-bottom: 3px solid #f00;
+}
+/*3.轮播图部分*/
+.wjs_banner .carousel-inner .mobileImg {
+  width: 100%;
+}
+.wjs_banner .carousel-inner .mobileImg img {
+  width: 100%;
+  display: block;
+}
+.wjs_banner .carousel-inner .pcImg {
+  width: 100%;
+  height: 410px;
+  display: block;
+  background-position: center center;
+  background-size: cover;
+}
+/*4.信息部分*/
+.info {
+  padding: 50px;
+}
+.info .row > div {
+  padding: 0 15px;
+  margin-top: 20px;
+}
+.info .row > div:hover .media_left {
+  color: #e92323;
+}
+.info .row > div:hover .media_right {
+  color: #e92323;
+}
+.info .row > div .media_left {
+  display: inline-block;
+  width: 40px;
+  height: 44px;
+  line-height: 40px;
+  float: left;
+  font-size: 30px;
+}
+.info .row > div .media_right {
+  float: left;
+  height: 44px;
+}
+.info .row > div .media_right h4 {
+  margin: 0;
+}
+/*5.预约部分*/
+.reverse {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px  solid #ccc;
+  border-top: 1px  solid #ccc;
+  overflow: hidden;
+}
+.reverse .wjs_icon {
+  font-size: 18px;
+}
+/*6.产品部分*/
+.product {
+  background-color: #eee;
+  padding: 20px;
+}
+.product .container {
+  /*1.产品的导航部分*/
+  /*2.产品的内容部分*/
+}
+.product .container .nav-tabs > li > a {
+  font-size: 20px;
+  padding: 15px 30px;
+  line-height: 60px;
+  background-color: transparent;
+  border: 0;
+}
+.product .container .nav-tabs > li > a:hover,
+.product .container .nav-tabs > li > a:focus {
+  border-bottom: 3px solid #f00;
+}
+.product .container .nav-tabs > li.active a {
+  border: 0;
+  border-bottom: 3px solid #f00;
+}
+.product .container .wjs_proBox {
+  background-color: #fff;
+  margin-top: 20px;
+  box-shadow: 1px 1px 1px #ccc;
+}
+.product .container .wjs_proBox .right {
+  float: right;
+  width: 100px;
+  height: 150px;
+  padding-top: 20px;
+  border-left: 1px dashed #ccc;
+  text-align: center;
+  position: relative;
+}
+.product .container .wjs_proBox .right::before,
+.product .container .wjs_proBox .right::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  left: -5px;
+  background-color: #eee;
+}
+.product .container .wjs_proBox .right::before {
+  top: -5px;
+}
+.product .container .wjs_proBox .right::after {
+  bottom: -5px;
+}
+.product .container .wjs_proBox .right > b {
+  font-size: 40px;
+  color: red;
+}
+.product .container .wjs_proBox .right > sub {
+  bottom: 0;
+}
+.product .container .wjs_proBox .right > p {
+  font-size: 12px;
+}
+.product .container .wjs_proBox .right > .wjs_tip {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translate(-50%, 0);
+}
+.product .container .wjs_proBox .right > .wjs_tip > span {
+  width: 15px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+.product .container .wjs_proBox .right > .wjs_tip > span:nth-of-type(1) {
+  border: 1px solid red;
+  color: red;
+}
+.product .container .wjs_proBox .right > .wjs_tip > span:nth-of-type(2) {
+  border: 1px solid blue;
+  color: blue;
+}
+.product .container .wjs_proBox .left {
+  margin-right: 100px;
+  height: 150px;
+}
+.product .container .wjs_proBox .left h3 {
+  font-size: 15px;
+  text-align: center;
+  line-height: 30px;
+  margin: 20px 0 10px 0;
+}
+.product .container .wjs_proBox .left .row {
+  margin: 0;
+}
+.product .container .wjs_proBox .left .row > div {
+  padding: 0 5px;
+}
+.product .container .wjs_proBox .left .row > div > p {
+  line-height: 15px;
+}
+.product .container .wjs_proBox .left .row > div:nth-of-type(even) {
+  text-align: right;
+}
+.product .container .container .active {
+  background-color: #e92323;
+  color: #fff;
+}
+.product .container .container .active .right b {
+  color: #fff;
+}
+.product .container .container .active .left h3 {
+  position: relative;
+}
+.product .container .container .active .left h3::before {
+  content: "\e915";
+  font-family: wjs;
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+/*7.新闻部分*/
+.news {
+  padding: 20px 0;
+}
+.news .wjs_news {
+  /*左侧新闻部分*/
+  text-align: center;
+  line-height: 50px;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+.news .wjs_news::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  right: -4px;
+  bottom: -4px;
+  background-color: #fff;
+}
+.news .news_middle {
+  /*中间列表部分*/
+  position: relative;
+}
+.news .news_middle .nav-tabs {
+  border-bottom: none;
+}
+.news .news_middle .nav-tabs li {
+  margin-bottom: 60px;
+}
+.news .news_middle .nav-tabs > li:nth-of-type(1) > a {
+  background-color: #e92323;
+}
+.news .news_middle .nav-tabs > li:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+.news .news_middle .nav-tabs > li a {
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #fff;
+  background-color: #ccc;
+}
+.news .dotline {
+  width: 0;
+  height: 100%;
+  border-left: 1px dashed red;
+  position: absolute;
+  top: 0;
+  left: 45px;
+}
+.news .tab-content .wjs_newslist {
+  list-style: none;
+  line-height: 50px;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .news li {
+    margin: 20px 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .news li {
+    width: 25%;
+    margin: 20px 0;
+  }
+}

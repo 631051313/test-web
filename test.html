@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .father,.mother{
+            width: 200px;
+            height: 200px;
+            background-color: #ff0000;
+            position: relative;
+            float: left;
+            font-size: 50px;
+            line-height: 50px;
+            text-align: center;
+            color:#fff;
+            /*margin-right:10px;*/
+        }
+        .son{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 200px;
+            top: 0;
+            background-color: black;
+            z-index: 1;
+        }
+        .box{
+            /*width: 200px;*/
+            height: 200px;
+            margin: 0 auto;
+            background-color: #0f0;
+        }
+        .box img{
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+<body>
+<div class="father">
+    on
+    <div class="son"></div>
+</div>
+<div class="mother">off</div>
+<div class="box">
+    12344<img src="images/topnav.png" alt=""/>
+</div>
+<script src="../lib/jquery/jquery.min.js"></script>
+<script>
+    $(function () {
+       $(".father").click(function () {
+            $(".son").animate({"left":"0px"},500);
+       });
+        $(".mother").click(function () {
+            $(".son").animate({"left":"200px"},500);
+        });
+    });
+</script>
+</body>
+</html>
